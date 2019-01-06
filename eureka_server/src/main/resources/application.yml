@@ -1,0 +1,14 @@
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+## 下面两个表示把eureka仅仅作为配置中心，不在作为client
+    fetch-registry: false
+    register-with-eureka: false
+server:
+  port: 8761
+  # context-path: registerCenter 给这个项目起个名字，如果有这个，后面调用时，如：http://localhost:8888/registerCenter/hello/sayHello
+## 给eureka起名字，如果加上上面两个，这个是多余的
+spring:
+  application:
+    name: ccc
